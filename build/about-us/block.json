@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "gld-blocks/about-us",
+  "version": "1.0.0",
+  "title": "About Us",
+  "category": "theme",
+  "icon": "admin-users",
+  "description": "About Us section with editable content and dynamic button",
+  "textdomain": "gld-blocks",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "About Us"
+    },
+    "intro": {
+      "type": "string",
+      "default": ""
+    },
+    "paragraph1": {
+      "type": "string",
+      "default": ""
+    },
+    "paragraph2": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Meet Our Team"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "/our-team"
+    },
+    "list1": {
+      "type": "array",
+      "default": [
+        "Sales & Leasing Brokerage",
+        "Buyer Representation",
+        "Tenant Representation",
+        "Site Selection"
+      ]
+    },
+    "list2": {
+      "type": "array",
+      "default": [
+        "Investment Sales",
+        "Property Management",
+        "Consulting",
+        "Property Valuation"
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

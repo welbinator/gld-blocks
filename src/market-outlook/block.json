@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "gld-blocks/market-outlook",
+	"title": "Market Outlook",
+	"category": "widgets",
+	"icon": "chart-bar",
+	"description": "Displays Cedar Rapids market outlook and sectors.",
+	"textdomain": "gld-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"attributes": {
+	  "buttonText": {
+		"type": "string",
+		"default": "Download the Report"
+	  },
+	  "buttonUrl": {
+		"type": "string",
+		"default": "#"
+	  }
+	}
+  }
+  

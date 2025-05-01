@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "home-hero/home-hero",
+  "version": "0.1.0",
+  "title": "Home Hero",
+  "category": "theme",
+  "icon": "smiley",
+  "description": "Hero section on home page",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "backgroundImage": {
+      "type": "string",
+      "default": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DJI_0455_ALedits_crop-for-website.jpg-ac3HFYYHgP3wnircDM3EflzvKfj0BO.jpeg"
+    },
+    "heading": {
+      "type": "string",
+      "default": "TRUSTED\nMARKET\nEXPERTS"
+    },
+    "subheading": {
+      "type": "string",
+      "default": "Your partner for commercial real estate in Cedar Rapids and Eastern Iowa."
+    },
+    "button1Text": {
+      "type": "string",
+      "default": "View Properties"
+    },
+    "button1Url": {
+      "type": "string",
+      "default": "/properties"
+    },
+    "button2Text": {
+      "type": "string",
+      "default": "Contact Us"
+    },
+    "button2Url": {
+      "type": "string",
+      "default": "/contact-us"
+    }
+  },
+  "textdomain": "gld-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

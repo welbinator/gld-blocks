@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector(".home-hero-background"),t=document.querySelector(".home-hero-content");e&&t&&window.addEventListener("scroll",(function(){const n=window.scrollY;e.style.transform=`translateY(${.15*n}px)`,t.style.transform=`translateY(${.05*n}px)`}))}));
