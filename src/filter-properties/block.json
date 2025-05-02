@@ -1,0 +1,17 @@
+{
+	"apiVersion": 2,
+	"name": "gld/filter-properties",
+	"title": "Filter Properties",
+	"category": "widgets",
+	"icon": "filter",
+	"description": "A frontend-only property filtering block.",
+	"keywords": ["property", "real estate", "filter"],
+	"supports": {
+	  "html": false
+	},
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+
+  }
+  

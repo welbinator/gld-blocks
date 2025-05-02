@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.wp.blocks,t=window.React,o=window.wp.blockEditor;(0,e.registerBlockType)("gld/filter-properties",{edit:function(){return(0,t.createElement)("div",{...(0,o.useBlockProps)()},"Filter Properties block (frontend only)")},save:function(){return null}})})();
