@@ -11,8 +11,8 @@ function gld_blocks_render_property_card($post_id) {
 	$url      = esc_url(get_permalink($post_id));
 	$img      = get_the_post_thumbnail_url($post_id, 'large') ?: 'https://via.placeholder.com/600x400?text=No+Image';
 	$price    = get_post_meta($post_id, 'property_price', true);
-	$price    = is_numeric($price) ? number_format((float) $price) : 'N/A';
-	$size     = esc_html(get_post_meta($post_id, 'property_size', true));
+	$display_price = $price ? esc_html($price) : 'N/A';
+	$size     = esc_html(get_post_meta($post_id, 'square_footage', true));
 	$address  = esc_html(get_post_meta($post_id, 'property_address', true));
 	$saleType = wp_get_post_terms($post_id, 'sale_type');
 	$propType = wp_get_post_terms($post_id, 'property_type');
@@ -31,9 +31,6 @@ function gld_blocks_render_property_card($post_id) {
             $type_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building h-4 w-4 mr-2"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>';
             break;
     }
-
-
-	
 
 	ob_start();
 	?>
@@ -72,13 +69,10 @@ function gld_blocks_render_property_card($post_id) {
 			</div>
 
 			<div class="mt-4">
-				<p class="text-xl font-bold text-red-600">$<?php echo $price; ?></p>
+				<p class="text-xl font-bold text-red-600"><?php echo $display_price; ?></p>
 			</div>
 
-			<?php
-			$excerpt = get_the_excerpt($post_id);
-			if ($excerpt) :
-				?>
+			<?php $excerpt = get_the_excerpt($post_id); if ($excerpt) : ?>
 				<p class="mt-3 text-gray-600 text-sm line-clamp-2"><?php echo esc_html($excerpt); ?></p>
 			<?php endif; ?>
 		</div>
@@ -91,6 +85,7 @@ function gld_blocks_render_property_card($post_id) {
 	<?php
 	return ob_get_clean();
 }
+
 
 
 
@@ -213,7 +208,7 @@ function gld_blocks_handle_ajax_filter() {
 		}
 	}
 
-	foreach (['price' => 'property_price', 'size' => 'property_size'] as $key => $meta_key) {
+	foreach (['price' => 'property_price', 'size' => 'square_footage'] as $key => $meta_key) {
 		$min = $_POST["min_$key"] ?? null;
 		$max = $_POST["max_$key"] ?? null;
 		if ($min || $max) {
