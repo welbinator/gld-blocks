@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "gld/team-members",
+  "title": "Team Members",
+  "category": "widgets",
+  "icon": "groups",
+  "description": "A grid of team members.",
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

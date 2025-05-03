@@ -1,0 +1,68 @@
+{
+  "apiVersion": 2,
+  "name": "gld/sior-ccim",
+  "title": "SIOR and CCIM",
+  "category": "widgets",
+  "icon": "admin-users",
+  "description": "Displays editable SIOR and CCIM content including video and team member highlights.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "siorTitle": {
+      "type": "string",
+      "default": "Why hire a SIOR?"
+    },
+    "siorVideoUrl": {
+      "type": "string",
+      "default": "https://www.youtube.com/embed/H7X7LgxtkAc?start=49"
+    },
+    "siorText": {
+      "type": "string",
+      "default": "<p><a href=\"/our-team/david-s-drown-president\" class=\"text-red-600 hover:text-red-800\">Dave Drown</a>, <a href=\"/our-team/adam-j-gibbs\" class=\"text-red-600 hover:text-red-800\">Adam Gibbs</a>, <a href=\"/our-team/angie-glick-martin\" class=\"text-red-600 hover:text-red-800\">Angie Glick-Martin</a> and <a href=\"/our-team/erica-seelman\" class=\"text-red-600 hover:text-red-800\">Erica Seelman</a> have all obtained the <strong>SIOR</strong> designation. For more than 80 years, the <a href=\"https://www.sior.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 hover:text-red-800 inline-flex items-center\">SOCIETY OF INDUSTRIAL AND OFFICE REALTORS®</a> (SIOR) designation has been associated with the highest standard among industrial and office professionals — professionals that convey knowledge, trust and prestige across the industry. It's a reflection of a global network of more than 3,700 industry leaders in 45 countries and 722 cities driven by best-in-class service and a shared professional respect for fellow designees. Each year, the SIOR network closes billions of dollars of sales and leases.</p>"
+    },
+    "siorLogo": {
+      "type": "string",
+      "default": "/placeholder.svg?height=96&width=300"
+    },
+    "ccimTitle": {
+      "type": "string",
+      "default": "Why hire a CCIM?"
+    },
+    "ccimText": {
+      "type": "string",
+      "default": "<p><a href=\"/our-team/david-s-drown-president\" class=\"text-red-600 hover:text-red-800\">Dave Drown</a> holds the coveted <strong>CCIM</strong> designation. A <a href=\"https://www.ccim.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 hover:text-red-800 inline-flex items-center\">Certified Commercial Investment Member</a> (CCIM) is a recognized expert in the disciplines of commercial and investment real estate. Only 6% of the estimated 125,000 commercial real estate practitioners nationwide hold the CCIM designation, which reflects not only the caliber of the program but also why it is one of the most coveted and respected designations in the industry. A CCIM is an invaluable resource to the commercial real estate owner, investor, and user, and is among an elite corps of 7,500 professionals across North America who hold the CCIM designation.</p>"
+    },
+    "ccimLogo": {
+      "type": "string",
+      "default": "/placeholder.svg?height=75&width=300"
+    },
+    "teamMembers": {
+      "type": "array",
+      "default": [
+        {
+          "name": "David S Drown",
+          "title": "SIOR, CCIM",
+          "image": "/placeholder.svg?height=150&width=150"
+        },
+        {
+          "name": "Adam J Gibbs",
+          "title": "SIOR",
+          "image": "/placeholder.svg?height=150&width=150"
+        },
+        {
+          "name": "Angie Glick-Martin",
+          "title": "SIOR",
+          "image": "/placeholder.svg?height=150&width=150"
+        },
+        {
+          "name": "Erica Seelman",
+          "title": "SIOR",
+          "image": "/placeholder.svg?height=150&width=150"
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

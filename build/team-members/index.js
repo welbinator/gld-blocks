@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.wp.blocks,s=window.React,t=window.wp.blockEditor;(0,e.registerBlockType)("gld/team-members",{edit:function(){return(0,s.createElement)("p",{...(0,t.useBlockProps)()},"This block displays the team members in a responsive grid.")},save:()=>null})})();

@@ -98,12 +98,7 @@ function gld_blocks_render_filter_properties($attributes, $content) {
 	<div id="gld-filter-properties-wrapper">
 		<main class="min-h-screen">
 			<div class="bg-white min-h-screen">
-				<div class="bg-gray-900 py-12">
-					<div class="container mx-auto px-4">
-						<h1 class="text-4xl md:text-5xl font-bold text-white font-montserrat">Properties</h1>
-						<p class="text-gray-300 mt-4 max-w-3xl">Browse our comprehensive selection of commercial properties in Cedar Rapids and Eastern Iowa. Use the filters below to find the perfect space for your business needs.</p>
-					</div>
-				</div>
+				
 				<div class="container mx-auto px-4 py-12">
 					<div class="flex flex-col lg:flex-row gap-8">
 						<!-- Sidebar filters -->
@@ -137,7 +132,7 @@ function gld_blocks_render_filter_properties($attributes, $content) {
 						<!-- Property Grid -->
 						<div class="lg:w-3/4">
 							<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
-								<p class="text-gray-700 mb-4 sm:mb-0">Showing filtered properties</p>
+								
 								<div class="flex items-center">
 									<label for="sort" class="mr-2 text-gray-700">Sort by:</label>
 									<select id="sort" class="border border-gray-300 rounded-md px-3 py-1.5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-600">

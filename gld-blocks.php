@@ -110,5 +110,23 @@ function gld_blocks_register_blocks() {
 	if ( file_exists( plugin_dir_path( __FILE__ ) . 'build/filter-properties/render.php' ) ) {
 		include_once plugin_dir_path( __FILE__ ) . 'build/filter-properties/render.php';
 	}
+
+	// Team Members Block
+	register_block_type(
+		__DIR__ . '/build/team-members',
+		[ 'render_callback' => 'gld_blocks_render_team_members' ]
+	);
+	if ( file_exists( plugin_dir_path( __FILE__ ) . 'build/team-members/render.php' ) ) {
+		include_once plugin_dir_path( __FILE__ ) . 'build/team-members/render.php';
+	}
+
+	// SIOR CCIM Block
+	register_block_type(
+		__DIR__ . '/build/sior-ccim',
+		[ 'render_callback' => 'gld_blocks_render_sior_ccim' ]
+	);
+	if ( file_exists( plugin_dir_path( __FILE__ ) . 'build/sior-ccim/render.php' ) ) {
+		include_once plugin_dir_path( __FILE__ ) . 'build/sior-ccim/render.php';
+	}
 }
 add_action( 'init', 'gld_blocks_register_blocks' );
